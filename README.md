@@ -13,15 +13,15 @@ Team Flu_Crew: Enjoli Baez, Kaleah French, Chelsea Thompson
 
 <h3>Type of Transformations needed for this data</h3>
 
-We will need to extensively clean and reduce the tables to the components we are interested in. The Census data is especially robust with extraneous data that we are not necessarily interested in. The Influenza data is not nearly as robust, due in part to HIPAA regulations and related concerns. Had the Influenza data been more robust, we might have been able to draw further conclusions about Influenza vulnerability correllations with factors other than age and state, like poverty level or insurance status.
+We will need to extensively clean and reduce the tables to the components we are interested in. The Census data is especially robust with extraneous data that we are not necessarily interested in. The Influenza data is not nearly as robust, due in part to HIPAA regulations and related concerns. Had the Influenza data been more robust, we might have been able to draw further conclusions about Influenza vulnerability correllations with factors other than state, like poverty level or insurance status.
 
 <h3>Type of final production database to load the data into pgadmin4</h3>
 
-We will load the data into a relational database, since our comparison points (age groups; state) are well-defined. A more structured database format is helpful in drawing conclusions and correlations between well-defined datasets.
+We will load the data into a relational database, since our comparison point (state) are well-defined. A more structured database format is helpful in drawing conclusions and correlations between well-defined datasets.
 
 <h3>The final tables or collections that will be used in the production database.</h3>
 
-The production database will end up with two tables, one for each dataset we pulled from our two sources. The first table will detail the influenza data, broken down by state into age groups and totals. The second table will detail census data, broken down in a similiar manner.
+The production database will end up with two tables, one for each dataset we pulled from our two sources. The first table will detail the influenza data, broken down by state into totals. The second table will detail census data, broken down in a similiar manner.
 
 <h3>Project Constraints</h3>
 
