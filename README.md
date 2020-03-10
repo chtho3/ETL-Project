@@ -26,3 +26,15 @@ The production database will end up with two tables, one for each dataset we pul
 <h3>Project Constraints</h3>
 
 Flu season is categorized by week number, and the datasets provided are adjusted from the calendar year to better portray the brunt of flu season that usually occurs from November to April of each year. For the 2017-2018 flu data, the set started on Oct 2, 2017, and ended on Sept 30, 2018. Instead of attempting to adjust census predictions to match this range exactly, we decided to use 2018 census data as a comparison. We postulate herein that populations did not significantly change in either span of three months preceding and following our matching data for both sets, from Jan 1, 2018, to Sept 30, 2018.
+
+<h2><b>E</b>xtract</h2>
+
+Our original data sources (CDC and US Census Bureau) were provided in csv files.
+
+<h2><b>T</b>ransform</h2>
+
+We loaded the csv dataframes into Jupyter Notebooks and extracted only the data we needed in order to relate total population and total influenza instances.
+
+<h2><b>L</b>oad</h2>
+
+We loaded the final databases into SQL dataframes via pgadmin4. We decided on this method because the data was highly structured and simple to relate by state.
