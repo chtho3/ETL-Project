@@ -35,6 +35,8 @@ Our original data sources (CDC and US Census Bureau) were provided in csv files.
 
 We loaded the csv dataframes into Jupyter Notebooks and extracted only the data we needed in order to relate total population and total influenza instances.
 
+<img src="/Resources/ipynb.PNG" />
+
 <h2><b>L</b>oad</h2>
 
 We loaded the final databases into SQL dataframes via pgadmin4. We decided on this method because the data was highly structured and simple to relate by state.
