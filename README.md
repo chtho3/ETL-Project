@@ -13,11 +13,28 @@ Team Flu_Crew: Enjoli Baez, Kaleah French, Chelsea Thompson
 
 <h3>Type of Transformations needed for this data</h3>
 
-We will need to extensively clean and reduce the tables to the components we are interested in. The Census data is especially robust with extraneous data that we are not necessarily interested in. The Influenza data is not nearly as robust, due in part to HIPAA regulations and related concerns. Had the Influenza data been more robust, we might have been able to draw further conclusions about Influenza vulnerability correllations with factors other than age, like poverty level or region.
+We will need to extensively clean and reduce the tables to the components we are interested in. The Census data is especially robust with extraneous data that we are not necessarily interested in. The Influenza data is not nearly as robust, due in part to HIPAA regulations and related concerns. Had the Influenza data been more robust, we might have been able to draw further conclusions about Influenza vulnerability correllations with factors other than state, like poverty level or insurance status.
 
-<h3>Type of final production database to load the data into </h3>
+<h3>Type of final production database to load the data into pgadmin4</h3>
 
-We will load the data into a relational database, since our comparison points (age groups) are well-defined.
+We will load the data into a relational database, since our comparison point (state) are well-defined. A more structured database format is helpful in drawing conclusions and correlations between well-defined datasets.
 
 <h3>The final tables or collections that will be used in the production database.</h3>
 
+The production database will end up with two tables, one for each dataset we pulled from our two sources. The first table will detail the influenza data, broken down by state into totals. The second table will detail census data, broken down in a similiar manner.
+
+<h3>Project Constraints</h3>
+
+Flu season is categorized by week number, and the datasets provided are adjusted from the calendar year to better portray the brunt of flu season that usually occurs from November to April of each year. For the 2017-2018 flu data, the set started on Oct 2, 2017, and ended on Sept 30, 2018. Instead of attempting to adjust census predictions to match this range exactly, we decided to use 2018 census data as a comparison. We postulate herein that populations did not significantly change in either span of three months preceding and following our matching data for both sets, from Jan 1, 2018, to Sept 30, 2018.
+
+<h2><b>E</b>xtract</h2>
+
+Our original data sources (CDC and US Census Bureau) were provided in csv files.
+
+<h2><b>T</b>ransform</h2>
+
+We loaded the csv dataframes into Jupyter Notebooks and extracted only the data we needed in order to relate total population and total influenza instances.
+
+<h2><b>L</b>oad</h2>
+
+We loaded the final databases into SQL dataframes via pgadmin4. We decided on this method because the data was highly structured and simple to relate by state.
